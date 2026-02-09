@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #1a237e;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.container > p {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.nuriklool-btn {
+    width: 300px;
+    height: 100px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border: none;
+    border-radius: 50px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    margin: 30px 0;
+}
+
+.nuriklool-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.nuriklool-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nuriklool-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50px;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.nuriklool-btn:hover::after {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Цвета флага России */
+.color-white {
+    background: linear-gradient(145deg, #ffffff, #f0f0f0) !important;
+    color: #333 !important;
+}
+
+.color-blue {
+    background: linear-gradient(145deg, #0033a0, #002080) !important;
+    color: white !important;
+}
+
+.color-red {
+    background: linear-gradient(145deg, #d52b1e, #b32115) !important;
+    color: white !important;
+}
+
+.counter {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    display: inline-block;
+    min-width: 200px;
+}
+
+.counter p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+}
+
+#clickCount {
+    color: #1a237e;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.instructions {
+    margin-top: 40px;
+    padding: 25px;
+    background-color: #f0f8ff;
+    border-radius: 15px;
+    text-align: left;
+    border-left: 5px solid #0033a0;
+}
+
+.instructions h3 {
+    color: #1a237e;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.instructions ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.instructions li {
+    padding: 8px 0;
+    color: #444;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 30px;
+}
+
+.instructions li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #0033a0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .nuriklool-btn {
+        width: 250px;
+        height: 80px;
+        font-size: 2rem;
+    }
+    
+    .instructions li {
+        font-size: 1rem;
+    }
+}
